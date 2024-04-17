@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Product Listing</h1>
+            <div class="hamburger-icon">&#9776;</div>
+        </div>
+    </header>
+    <main class="main-content container">
+        <div class="main-div">
+            <div class="filter-options">
+                <div class="close-btn">&times;</div>
+                <div class="search-bar">
+                    <input type="text" id="search-input" class="search-bar__input" placeholder="Search products...">
+                    <button id="search-btn" class="search-bar__button">Search</button>
+                </div>
+                <label for="category-filter" class="product-listing__filter-label">Filter by Category:</label>
+                <select id="category-filter" class="product-listing__filter-select">
+                    <option value="">All Categories</option>
+                </select>
+
+                <label for="price-filter" class="product-listing__filter-label">Filter by Price Range:</label>
+                <select id="price-filter" class="product-listing__filter-select">
+                    <option value="">All Prices</option>
+                    <option value="0-50">$0 - $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200-999999">Above $200</option>
+                </select>
+
+                <label for="availability-filter" class="product-listing__filter-label">Filter by Availability:</label>
+                <select id="availability-filter" class="product-listing__filter-select">
+                    <option value="">All</option>
+                    <option value="true">Available</option>
+                    <option value="false">Not Available</option>
+                </select>
+
+                <label for="sort-by" class="product-listing__filter-label">Sort by:</label>
+                <select id="sort-by" class="product-listing__filter-select">
+                    <option value="price-low-to-high">Price Low to High</option>
+                    <option value="price-high-to-low">Price High to Low</option>
+                </select>
+            
+            </div>
+            
+            <div class="product-list">
+                <div id="loading-indicator" class="product-listing__loading-indicator shimmer" ></div> 
+
+                <div id="product-list" class="product-listing__product-list"></div>        
+            </div>
+        </div>
+        <button id="load-more-btn" class="load-more">Load More</button>
+        <!-- Error message -->
+        <div id="error-message" style="display: none;"></div>
+      </main>
+    
+  
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
